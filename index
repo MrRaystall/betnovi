@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAYNERVIP | El Código de la Élite Deportiva</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+        }
+        .font-brand { font-family: 'Montserrat', sans-serif; }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .vip-gradient {
+            background: linear-gradient(135deg, #fcd34d 0%, #fbbf24 50%, #d97706 100%);
+        }
+        .neon-border {
+            box-shadow: 0 0 15px rgba(52, 211, 153, 0.3);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="text-gray-200 overflow-x-hidden">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 z-0">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-amber-500/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-500/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <nav class="relative z-10 container mx-auto px-6 py-8 flex justify-between items-center">
+        <div class="text-2xl font-brand font-extrabold tracking-tighter italic">
+            RAYNER<span class="text-amber-400">VIP</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-gray-400">
+            <a href="#bonos" class="hover:text-amber-400 transition">Bonos</a>
+            <a href="#pasos" class="hover:text-amber-400 transition">¿Cómo funciona?</a>
+            <a href="#comunidad" class="hover:text-amber-400 transition">Comunidad</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative z-10 container mx-auto px-6 pt-12 pb-24 text-center">
+        <div class="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-8">
+            <span class="flex h-2 w-2 rounded-full bg-emerald-400"></span>
+            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Cupos VIP Disponibles para 2026</span>
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl font-brand font-extrabold mb-6 leading-tight tracking-tight">
+            TU PASE A LA <br> <span class="text-transparent bg-clip-text vip-gradient">ÉLITE DEPORTIVA</span>
+        </h1>
+        
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12">
+            Multiplica tus primeros depósitos y accede a pronósticos premium basados en datos reales de LigaPro360.
+        </p>
+
+        <!-- Promo Code Box -->
+        <div class="max-w-md mx-auto relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <div class="relative glass p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
+                <div class="text-left">
+                    <p class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Código Promocional</p>
+                    <p id="promoCode" class="text-3xl font-brand font-black text-white">RAYNERVIP</p>
+                </div>
+                <button onclick="copyCode()" id="copyBtn" class="w-full md:w-auto bg-white text-black px-6 py-4 rounded-xl font-bold hover:bg-amber-400 transition-all flex items-center justify-center space-x-2">
+                    <i data-lucide="copy" class="w-5 h-5"></i>
+                    <span>COPIAR</span>
+                </button>
+            </div>
+            <p id="copyStatus" class="absolute -bottom-8 left-0 right-0 text-emerald-400 text-sm font-medium opacity-0 transition-opacity">¡Copiado con éxito!</p>
+        </div>
+    </header>
+
+    <!-- Comparison Section -->
+    <section id="bonos" class="relative z-10 container mx-auto px-6 py-20">
+        <h2 class="text-3xl font-brand font-bold text-center mb-16 uppercase tracking-tighter">Selecciona tu <span class="text-amber-400">Beneficio</span></h2>
+        
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- Betano Card -->
+            <div class="glass p-8 rounded-3xl border-t-4 border-amber-500 hover:scale-[1.02] transition-transform duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Betano_logo.svg/2560px-Betano_logo.svg.png" alt="Betano" class="h-8 mb-8 opacity-90">
+                <h3 class="text-4xl font-black mb-4">100% BONO</h3>
+                <p class="text-amber-400 text-2xl font-bold mb-6">Hasta $300 USD</p>
+                <ul class="space-y-4 mb-10 text-gray-400">
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+                        <span>Apuesta gratis exclusiva de $10</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+                        <span>Las mejores cuotas para la LigaPro</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+                        <span>Retiros rápidos en Ecuador</span>
+                    </li>
+                </ul>
+                <a href="TU_LINK_AFILIADO_BETANO" class="block w-full bg-amber-500 hover:bg-amber-600 text-black text-center py-4 rounded-xl font-extrabold transition text-lg">RECLAMAR EN BETANO</a>
+            </div>
+
+            <!-- Novibet Card -->
+            <div class="glass p-8 rounded-3xl border-t-4 border-emerald-500 hover:scale-[1.02] transition-transform duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Novibet_Logo.svg/2560px-Novibet_Logo.svg.png" alt="Novibet" class="h-8 mb-8 opacity-90">
+                <h3 class="text-4xl font-black mb-4 text-white">100% BONO</h3>
+                <p class="text-emerald-400 text-2xl font-bold mb-6">Hasta $500 USD</p>
+                <ul class="space-y-4 mb-10 text-gray-400">
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+                        <span>Bono de bienvenida más alto</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+                        <span>Excelente App móvil (PWA)</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+                        <span>Soporte 24/7 en español</span>
+                    </li>
+                </ul>
+                <a href="TU_LINK_AFILIADO_NOVIBET" class="block w-full bg-emerald-500 hover:bg-emerald-600 text-black text-center py-4 rounded-xl font-extrabold transition text-lg">RECLAMAR EN NOVIBET</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="pasos" class="relative z-10 bg-white/5 py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-brand font-bold mb-4 uppercase tracking-tighter">Tres pasos hacia el <span class="text-amber-400">VIP</span></h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div>
+                    <div class="w-16 h-16 bg-amber-400 text-black rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6">1</div>
+                    <h4 class="text-xl font-bold mb-3">Regístrate</h4>
+                    <p class="text-gray-400">Haz clic en tu casa favorita y crea tu cuenta nueva.</p>
+                </div>
+                <div>
+                    <div class="w-16 h-16 bg-amber-400 text-black rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6">2</div>
+                    <h4 class="text-xl font-bold mb-3">Usa RAYNERVIP</h4>
+                    <p class="text-gray-400">Ingresa el código en la casilla de código promocional.</p>
+                </div>
+                <div>
+                    <div class="w-16 h-16 bg-amber-400 text-black rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6">3</div>
+                    <h4 class="text-xl font-bold mb-3">Gana</h4>
+                    <p class="text-gray-400">Recibe tu bono y empieza a apostar con ventaja.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 container mx-auto px-6 py-12 text-center border-t border-white/5">
+        <div class="text-xl font-brand font-extrabold mb-6 tracking-tighter italic">
+            RAYNER<span class="text-amber-400">VIP</span>
+        </div>
+        <p class="text-gray-500 text-xs max-w-2xl mx-auto leading-relaxed">
+            Juego responsable. Solo para mayores de 18 años. Las apuestas deportivas implican riesgo. <br>
+            © 2026 Rayner Bet Management. Basado en estadísticas de LigaPro360.
+        </p>
+    </footer>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Copy Functionality
+        function copyCode() {
+            const code = document.getElementById('promoCode').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                const status = document.getElementById('copyStatus');
+                const btn = document.getElementById('copyBtn');
+                
+                status.style.opacity = '1';
+                btn.classList.add('bg-emerald-400');
+                
+                setTimeout(() => {
+                    status.style.opacity = '0';
+                    btn.classList.remove('bg-emerald-400');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
