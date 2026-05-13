@@ -36,7 +36,6 @@
 </head>
 <body class="text-gray-200 overflow-x-hidden">
 
-    <!-- Background Elements -->
     <div class="fixed inset-0 z-0">
         <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-amber-500/10 rounded-full blur-[120px]"></div>
         <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-emerald-500/10 rounded-full blur-[120px]"></div>
@@ -53,7 +52,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="relative z-10 container mx-auto px-6 pt-12 pb-24 text-center">
         <div class="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-8">
             <span class="flex h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -68,7 +66,6 @@
             Multiplica tus primeros depósitos y accede a pronósticos premium basados en datos reales de LigaPro360.
         </p>
 
-        <!-- Promo Code Box -->
         <div class="max-w-md mx-auto relative group">
             <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
             <div class="relative glass p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
@@ -85,7 +82,6 @@
         </div>
     </header>
 
-    <!-- Comparison Section -->
     <section id="bonos" class="relative z-10 container mx-auto px-6 py-20">
         <h2 class="text-3xl font-brand font-bold text-center mb-16 uppercase tracking-tighter">Selecciona tu <span class="text-amber-400">Beneficio</span></h2>
         
@@ -136,7 +132,6 @@
         </div>
     </section>
 
-    <!-- How it works -->
     <section id="pasos" class="relative z-10 bg-white/5 py-24">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -162,7 +157,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="relative z-10 container mx-auto px-6 py-12 text-center border-t border-white/5">
         <div class="text-xl font-brand font-extrabold mb-6 tracking-tighter italic">
             RAYNER<span class="text-amber-400">VIP</span>
@@ -174,24 +168,27 @@
     </footer>
 
     <script>
-        // Initialize Icons
         lucide.createIcons();
 
-        // Copy Functionality
         function copyCode() {
             const code = document.getElementById('promoCode').innerText;
-            navigator.clipboard.writeText(code).then(() => {
-                const status = document.getElementById('copyStatus');
-                const btn = document.getElementById('copyBtn');
-                
-                status.style.opacity = '1';
-                btn.classList.add('bg-emerald-400');
-                
-                setTimeout(() => {
-                    status.style.opacity = '0';
-                    btn.classList.remove('bg-emerald-400');
-                }, 2000);
-            });
+            const tempInput = document.createElement("input");
+            tempInput.value = code;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            const status = document.getElementById('copyStatus');
+            const btn = document.getElementById('copyBtn');
+            
+            status.style.opacity = '1';
+            btn.classList.add('bg-emerald-400');
+            
+            setTimeout(() => {
+                status.style.opacity = '0';
+                btn.classList.remove('bg-emerald-400');
+            }, 2000);
         }
     </script>
 </body>
