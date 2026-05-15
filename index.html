@@ -23,14 +23,6 @@
         .vip-gradient {
             background: linear-gradient(135deg, #fcd34d 0%, #fbbf24 50%, #d97706 100%);
         }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
         .pulse-animation {
             animation: pulse 2s infinite;
         }
@@ -43,11 +35,13 @@
 </head>
 <body class="overflow-x-hidden">
 
+    <!-- Background Decoration -->
     <div class="fixed inset-0 z-0 pointer-events-none">
         <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-amber-500/10 rounded-full blur-[120px]"></div>
         <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-emerald-500/10 rounded-full blur-[120px]"></div>
     </div>
 
+    <!-- Navigation -->
     <nav class="relative z-10 container mx-auto px-6 py-8 flex justify-between items-center">
         <div class="text-2xl font-brand font-extrabold tracking-tighter italic">
             RAYNER<span class="text-amber-400">ELITE</span>
@@ -59,6 +53,7 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="relative z-10 container mx-auto px-6 pt-12 pb-20 text-center">
         <div class="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-8">
             <span class="flex h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -70,13 +65,14 @@
         </h1>
         
         <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12">
-            Multiplica tus depósitos iniciales y accede a mi comunidad privada con el código que abre todas las puertas.
+            Multiplica tus depósitos iniciales y accede a mi comunidad privada con el código que abre todas las puertas en Ecuador.
         </p>
 
+        <!-- Promo Code Box -->
         <div class="max-w-md mx-auto relative group">
             <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-            <div class="relative glass p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
-                <div class="text-left">
+            <div class="relative glass p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4 text-center md:text-left">
+                <div>
                     <p class="text-[10px] uppercase tracking-widest text-amber-500 font-bold">Código Oficial</p>
                     <p id="promoCode" class="text-3xl font-brand font-black text-white">RAYNERVIP</p>
                 </div>
@@ -89,32 +85,51 @@
         </div>
     </header>
 
+    <!-- Bonus Section -->
     <section id="bonos" class="relative z-10 container mx-auto px-6 py-12">
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div class="glass p-10 rounded-3xl border-l-4 border-amber-500 hover:bg-white/[0.05] transition-all">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Betano_logo.svg/2560px-Betano_logo.svg.png" alt="Betano" class="h-6 mb-8 opacity-80">
-                <h3 class="text-4xl font-black mb-2">BONO 100%</h3>
-                <p class="text-amber-400 text-2xl font-bold mb-6">Hasta $300 USD</p>
-                <a href="TU_LINK_BETANO" class="inline-flex items-center text-sm font-bold text-white group">
+            
+            <!-- Betano Card -->
+            <div class="glass p-10 rounded-3xl border-l-4 border-amber-500 hover:bg-white/[0.05] transition-all flex flex-col justify-between">
+                <div>
+                    <div class="h-10 mb-8 flex items-center">
+                        <!-- SVG Logo Betano (Fallback Inline) -->
+                        <svg viewBox="0 0 160 32" class="h-full fill-white/80">
+                            <path d="M14.5 5.5c-3.1 0-5.7 2.5-5.7 5.7s2.5 5.7 5.7 5.7c3.1 0 5.7-2.5 5.7-5.7s-2.6-5.7-5.7-5.7zm0 9.1c-1.9 0-3.4-1.5-3.4-3.4s1.5-3.4 3.4-3.4c1.9 0 3.4 1.5 3.4 3.4s-1.5 3.4-3.4 3.4zM29.1 5.5v11.4h2.3V5.5h-2.3zm12.3 0c-3.2 0-5.7 2.5-5.7 5.7s2.5 5.7 5.7 5.7c2.8 0 5-2 5.6-4.6h-2.4c-.5 1.3-1.8 2.3-3.2 2.3-1.9 0-3.4-1.5-3.4-3.4s1.5-3.4 3.4-3.4c1.4 0 2.6.9 3.2 2.3h2.4c-.6-2.6-2.8-4.6-5.6-4.6zm16.5 0c-1.1 0-2.1.4-2.8 1.1-.7-.7-1.7-1.1-2.8-1.1-2.1 0-3.8 1.7-3.8 3.8v7.6h2.3V9.3c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5v7.6h2.3V9.3c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5v7.6h2.3V9.3c0-2.1-1.7-3.8-3.8-3.8zm11.9 0v2.3h2.1V5.5h-2.1zm0 3.8v7.6h2.1V9.3h-2.1z"/>
+                            <text x="0" y="24" font-family="Montserrat" font-weight="900" font-style="italic" fill="white" font-size="22">BETANO</text>
+                        </svg>
+                    </div>
+                    <h3 class="text-4xl font-black mb-2">BONO 100%</h3>
+                    <p class="text-amber-400 text-2xl font-bold mb-6">Hasta $300 USD</p>
+                </div>
+                <a href="TU_LINK_BETANO" target="_blank" class="inline-flex items-center text-sm font-bold text-white group">
                     REGISTRARSE EN BETANO <i data-lucide="arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
                 </a>
             </div>
 
-            <div class="glass p-10 rounded-3xl border-l-4 border-emerald-500 hover:bg-white/[0.05] transition-all">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Novibet_Logo.svg/2560px-Novibet_Logo.svg.png" alt="Novibet" class="h-6 mb-8 opacity-80">
-                <h3 class="text-4xl font-black mb-2 text-white">BONO 100%</h3>
-                <p class="text-emerald-400 text-2xl font-bold mb-6">Hasta $500 USD</p>
-                <a href="TU_LINK_NOVIBET" class="inline-flex items-center text-sm font-bold text-white group">
+            <!-- Novibet Card -->
+            <div class="glass p-10 rounded-3xl border-l-4 border-emerald-500 hover:bg-white/[0.05] transition-all flex flex-col justify-between">
+                <div>
+                    <div class="h-10 mb-8 flex items-center">
+                        <svg viewBox="0 0 160 32" class="h-full fill-white/80">
+                           <text x="0" y="24" font-family="Montserrat" font-weight="900" font-style="italic" fill="white" font-size="22">NOVIBET</text>
+                        </svg>
+                    </div>
+                    <h3 class="text-4xl font-black mb-2 text-white">BONO 100%</h3>
+                    <p class="text-emerald-400 text-2xl font-bold mb-6">Hasta $500 USD</p>
+                </div>
+                <a href="TU_LINK_NOVIBET" target="_blank" class="inline-flex items-center text-sm font-bold text-white group">
                     REGISTRARSE EN NOVIBET <i data-lucide="arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
                 </a>
             </div>
         </div>
     </section>
 
+    <!-- Community Section -->
     <section id="comunidad" class="relative z-10 container mx-auto px-6 py-20">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-brand font-bold uppercase tracking-tight">Nuestra <span class="text-amber-400">Comunidad</span></h2>
-            <p class="text-gray-500 mt-2">Únete a los canales oficiales para señales y análisis</p>
+            <p class="text-gray-500 mt-2">Únete a los canales oficiales para señales y análisis exclusivos</p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -142,6 +157,7 @@
         </div>
     </section>
 
+    <!-- Process Section -->
     <section id="pasos" class="relative z-10 bg-white/5 py-24 border-y border-white/5">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-brand font-bold mb-16 uppercase italic">Proceso de <span class="text-amber-400">Activación</span></h2>
@@ -149,35 +165,37 @@
                 <div class="space-y-4">
                     <div class="text-5xl font-black text-white/10 italic">01</div>
                     <h4 class="text-xl font-bold text-amber-400">REGISTRO</h4>
-                    <p class="text-gray-400 text-sm">Crea tu cuenta en Betano o Novibet desde nuestros links.</p>
+                    <p class="text-gray-400 text-sm">Crea tu cuenta en Betano o Novibet usando nuestros enlaces oficiales.</p>
                 </div>
                 <div class="space-y-4">
                     <div class="text-5xl font-black text-white/10 italic">02</div>
                     <h4 class="text-xl font-bold text-amber-400">CÓDIGO</h4>
-                    <p class="text-gray-400 text-sm">Ingresa <span class="text-white font-bold">RAYNERVIP</span> en el campo promocional.</p>
+                    <p class="text-gray-400 text-sm">Ingresa <span class="text-white font-bold">RAYNERVIP</span> en el apartado de código promocional.</p>
                 </div>
                 <div class="space-y-4">
                     <div class="text-5xl font-black text-white/10 italic">03</div>
                     <h4 class="text-xl font-bold text-amber-400">DEPÓSITO</h4>
-                    <p class="text-gray-400 text-sm">Carga saldo y tu bono se activará automáticamente.</p>
+                    <p class="text-gray-400 text-sm">Realiza tu primer depósito y el bono se acreditará al instante.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="relative z-10 container mx-auto px-6 py-12 text-center text-gray-600 text-xs">
         <div class="text-lg font-brand font-extrabold mb-4 italic text-gray-400">
             RAYNER<span class="text-amber-400">ELITE</span>
         </div>
         <p class="max-w-xl mx-auto leading-relaxed">
             Publicidad dirigida a mayores de 18 años. Juega con responsabilidad. <br>
-            © 2026 Rayner Elite Management - Basado en métricas de LigaPro360.
+            © 2026 Rayner Elite Management - Análisis basado en sistemas LigaPro360.
         </p>
     </footer>
 
-    <a href="https://wa.me/TUNUMERO" target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 bg-emerald-500 rounded-full shadow-2xl pulse-animation hover:scale-110 transition-transform">
+    <!-- Floating WhatsApp Help -->
+    <a href="https://wa.me/593900000000" target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 bg-emerald-500 rounded-full shadow-2xl pulse-animation hover:scale-110 transition-transform">
         <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
-        <span class="absolute right-full mr-4 bg-white text-black px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap shadow-xl">¿Tienes dudas? ¡Escríbeme!</span>
+        <span class="absolute right-full mr-4 bg-white text-black px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap shadow-xl hidden md:block">¿Dudas? Chatea conmigo</span>
     </a>
 
     <script>
